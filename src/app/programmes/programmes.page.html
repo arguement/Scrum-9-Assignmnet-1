@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>programmes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let programme of programmes;index as position">
+      <ion-label>
+        <h4>{{ programme["name"] }}</h4>
+
+        <div class="ion-margin-start" style="color:grey;">
+          <p *ngFor="let other of programme['sub']; let i = index">{{i+1}}: {{ other }}</p>
+        </div>
+      
+      </ion-label>
+
+      
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
